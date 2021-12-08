@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ứng dụng chuyển đổi tiền tệ</title>
+</head>
+<body>
+    <style>
+        table {
+            width: 1000px;
+        }
+        th {
+            font-size: 200%;
+        }
+        button {
+            background-color: blue;
+            color: white;
+        }
+        b {
+            color: blue;
+            font-size: 30px;
+        }
+    </style>
+    <form>
+        <table>
+            <tr>
+                <th>Amount</th>
+                <th>From Currency</th>
+                <th>To Currency</th>
+            </tr>
+            <tr>
+                <th><input type="number" id="money"></th>
+                <th>
+                    <select id="country1">
+<option value="vietnam">Việt Nam</option>
+                        <option value="america" checked>Mỹ</option>
+                    </select>
+                </th>
+                <th>
+                    <select id=country2>
+                        <option value="america">Mỹ</option>
+                        <option value="vietnam" checked>Việt nam</option>
+                    </select>
+                </th>
+                <th>
+                    <button type="button" onclick="chuyendoi();">Convert</button>
+                    <button onClick="window.location.reload()">Làm mới</button>
+                </th>
+            </tr>
+        </table>
+        <br>
+    </form>
+    <b id="ketqua">result: </b><b>$</b>
+</body>
+    <script>
+           function chuyendoi() {
+                let money=document.getElementById('money').value;
+                let country1=document.getElementById('country1').value;
+                let country2=document.getElementById('country2').value;
+
+                if (country1=='vietnam' && country2=='america') {
+                    document.getElementById("ketqua").innerHTML+=(money/23000);
+                 document.getElementById('money').value = "";
+                } else {
+                     if (country1=='america' && country2=='vietnam') {
+                    document.getElementById("ketqua").innerHTML+=(money*23000);
+                    document.getElementById('money').value = "";
+                    } else {
+                    alert('wrong');        
+                    }
+                }
+            }
+    </script>
+ 
+    
+</html>
