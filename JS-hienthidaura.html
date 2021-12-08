@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Thực hành] Hiển thị đầu ra</title>
+</head>
+<body>
+    <div id="MessageDiv"></div>
+    <button type="button" onclick="showMessage()">Click Me !</button><hr>
+    <button type="button" onclick="showMessage2()">Click Me !</button><hr>
+    <button type="button" onclick="showMessage3()">Click Me !</button><hr>
+    <button type="button" onclick="showMessage4()">Click Me !</button><hr>
+    <script>
+        function showMessage() {
+            document.getElementById('MessageDiv').innerHTML="Xin Chào";
+        }
+        function showMessage2() {
+            alert('Xin Chào 2');
+        }
+        function showMessage3() {
+            document.write('Xin Chào 3');
+        }
+        function showMessage4() {
+            console.log('Xin Chào 4')
+        }
+    </script>
+</body>
+</html>
