@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính điểm trunh bình</title>
+</head>
+<body>
+    <script>
+        let physical= prompt('Nhập điểm lý: ');
+        let chemistry= prompt('nhập điểm hóa:');
+        let biology= prompt('nhập điểm sinh học');
+        let p= parseInt(physical);
+        let c= parseInt(chemistry);
+        let b= parseInt(biology);
+        let total= p + c + b;
+        let total2= (p + c +b)/3;
+            document.write('tổng của điểm là:' + total);
+            document.write('<br/>');
+            document.write('điểm trunh bình tất cả môn là:' + total2);
+    </script>
+</body>
+</html>
