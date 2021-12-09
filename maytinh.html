@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ứng dụng máy tính</title>
 </head>
+
 <body>
     <h1>Caculator</h1>
     <table>
@@ -20,35 +22,41 @@
             <th><button type="button" onclick="chia();">Division(/)</button></th>
         </tr>
     </table>
-    <b id="ketqua">result=</b><br>
+    <b>result: </b>
+    <b id="ketqua"></b>
+    <br>
     <button onClick="window.location.reload()">clear</button>
 </body>
 <script>
     function cong() {
-        let so1=document.getElementById('so1').value;
-        let so2=document.getElementById('so2').value;
-        let s1=parseInt(so1);
-        let s2=parseInt(so2);
-        document.getElementById("ketqua").innerHTML+=(s1+s2);
+        let so1 = document.getElementById('so1').value;
+        let so2 = document.getElementById('so2').value;
+        let s1 = Number(so1);
+        let s2 = Number(so2);
+        document.getElementById("ketqua").innerHTML = (s1 + s2);
 
     }
+
     function tru() {
-        let so1=document.getElementById('so1').value;
-        let so2=document.getElementById('so2').value;
-        document.getElementById("ketqua").innerHTML+=(so1-so2);
+        let so1 = document.getElementById('so1').value;
+        let so2 = document.getElementById('so2').value;
+        document.getElementById("ketqua").innerHTML = (so1 - so2);
 
     }
+
     function nhan() {
-        let so1=document.getElementById('so1').value;
-        let so2=document.getElementById('so2').value;
-        document.getElementById("ketqua").innerHTML+=(so1*so2);
+        let so1 = document.getElementById('so1').value;
+        let so2 = document.getElementById('so2').value;
+        document.getElementById("ketqua").innerHTML = (so1 * so2);
 
     }
+
     function chia() {
-        let so1=document.getElementById('so1').value;
-        let so2=document.getElementById('so2').value;
-        document.getElementById("ketqua").innerHTML+=(so1/so2);
+        let so1 = document.getElementById('so1').value;
+        let so2 = document.getElementById('so2').value;
+        document.getElementById("ketqua").innerHTML = (so1 / so2);
 
     }
 </script>
+
 </html>
