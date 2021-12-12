@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Do you love me!</title>
+    <style>
+        td {
+            width: 120px;
+        }
+        input {
+            border-radius: 5px;
+            background-color: rgb(238, 238, 238);
+        }
+    </style>
+</head>
+<body>
+    <table>
+    <caption><h1>Do you love me ?</h1></caption>
+        <tr>
+            <td><input type="button" id="yes" value="Yes" onclick="yes()" style="position:absolute"></td>
+            <td><input type="button" id="no" value="No" onmouseover="noHover()" style="position:absolute"></td>
+        </tr>
+    </table>
+</body>
+<script>
+    function yes() {
+        alert('Yes, u are right!!!')
+    }
+    function noHover() {
+        let a = Math.round(Math.random() * window.innerWidth);
+        let b = Math.round(Math.random() * window.innerHeight);
+        document.getElementById('no').style.left = a + 'px';
+        document.getElementById('no').style.top = b + 'px';
+
+    }
+</script>
+</html>
