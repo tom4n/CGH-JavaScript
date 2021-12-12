@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giải phương trình bậc 2.</title>
+</head>
+<body>
+    <script>
+        let a = Number(prompt('nhập số a'));
+        let b = Number(prompt('nhập số b'));
+        let c = Number(prompt('nhập số c'));
+        let A = Math.pow(b,2)-4*a*c;
+            if (a == 0) {
+                document.write('a phải khác 0');
+            } else if (A < 0) {
+                document.write('phương trình vô nghiệm');
+            } else if (A == 0) {
+                document.write('phương trình có nghiệm kép x1 = x2 = ' + -b/2*a);
+            } else if (A > 0) {
+                document.write('Phương trình có 2 nghiệm phân biệt' + "</br>");
+                document.write('nghiệm x1 = ' + (-b + Math.sqrt(A))/(2*a) + '</br>');
+                document.write('nghiệm x2 = ' + (-b - Math.sqrt(A))/(2*a));
+            }
+    </script>
+</body>
+</html>

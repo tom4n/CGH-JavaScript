@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác. Điều kiện để a,b,c là cạnh của một tam giác là:</title>
+</head>
+<body>
+    <script>
+        let a = Number(prompt('nhập cạnh a: '));
+        let b = Number(prompt('nhập cạnh b: '));
+        let c = Number(prompt('nhập cạnh c: '));
+            if (a,b,c >0 && a+b>c && a+c >b && b+c>a) {
+                alert(' đây là một tam giác.');
+            } else {
+                alert('đây không phải là tam giác.');
+            }
+    </script>
+</body>
+</html>

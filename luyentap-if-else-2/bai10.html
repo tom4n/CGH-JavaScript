@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 10: Viết chương trình tính giá điện.</title>
+</head>
+<body>
+    <script>
+        let kV = Number(prompt('cấp điện áp của bạn 6 kV - 110kV: '));
+        let kWh = Number(prompt('Nhập số Kilowatt của bạn trong 1 tháng: '));
+            if (kV > 110) {
+                document.write('giá điện của bạn là: ' + kWh*2700 + 'VND');
+            } else if (kV > 22 && kV < 110) {
+                document.write('giá điện của bạn là: ' + kWh*2800 + 'VND');
+            } else if (kV > 6 && kV < 22) {
+                document.write('giá điện của bạn là: ' + kWh*2900 + 'VND');
+            } else if (kV < 6) {
+                document.write('giá điện của bạn là: ' + kWh*3000 + 'VND');
+            }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viết chương trình tính thuế thu nhập cá nhân.</title>
+</head>
+<body>
+    <script>
+        let thue = Number(prompt('thu nhập của bạn 1 tháng */triệu: '));
+            if (thue < 5 ) {
+                document.write('Thuế suất của bạn là 5%.' + '</br>');
+                document.write('số thuế phải nộp là ' + thue*5/100 + " Triệu VND");
+            } else if (thue > 5 && thue < 10 ) {
+                document.write('Thuế suất của bạn là 10%.' + '</br>');
+                document.write('số thuế phải nộp là ' + thue*10/100 + " Triệu VND");
+            } else if (thue > 10 && thue < 18 ) {
+                document.write('Thuế suất của bạn là 15%.' + '</br>');
+                document.write('số thuế phải nộp là ' + thue*15/100 + " Triệu VND");
+            } else if (thue > 18 && thue < 32 ) {
+                document.write('Thuế suất của bạn là 20%.' + '</br>');
+                document.write('số thuế phải nộp là ' + thue*20/100 + " Triệu VND");
+            } else if (thue > 32 && thue < 52 ) {
+                document.write('Thuế suất của bạn là 25%.' + '</br>');
+                document.write('số thuế phải nộp là ' + thue*25/100 + " Triệu VND");
+            } else if (thue > 52 && thue < 80 ) {
+                document.write('Thuế suất của bạn là 30%.' + '</br>');
+                document.write('số thuế phải nộp là ' + thue*30/100 + " Triệu VND");
+            } else if (thue >= 80) {
+                document.write('Thuế suất của bạn là 35%.' + '</br>');
+                document.write('số thuế phải nộp là ' + thue*35/100 + " Triệu VND");
+            }
+    </script>
+</body>
+</html>
