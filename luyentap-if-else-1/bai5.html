@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 5: Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ</title>
+</head>
+<body>
+    <script>
+        let diemkiemtra= Number(prompt('Nhập điểm kiểm tra: '));
+        let diemgiuaky= Number(prompt('nhập điểm giữa kỳ:'));
+        let diemthicuoiky= Number(prompt('nhập điểm cuối kỳ'));
+        let total= (diemkiemtra + diemgiuaky +diemthicuoiky)/3;
+            if (total >= 9) {
+                document.write('xuất sắc');
+            } else if (total >= 7) {
+                document.write('giỏi');
+            } else if (total >= 6) {
+                document.write('khá');
+            } else if (total >= 5) {
+                document.write('trung bình');
+            }
+    </script>
+</body>
+</html>
