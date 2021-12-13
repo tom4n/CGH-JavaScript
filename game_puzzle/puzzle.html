@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game puzzle</title>
+    <style>
+        img {
+            border: 2px onset black;
+        }
+
+        .container {
+            margin: 20px;
+            padding: 3px;
+        }
+
+        .top {
+            position: absolute;
+            clip: rect(0, 800px, 200px, 0);
+        }
+
+        .center {
+            position: absolute;
+            clip: rect(201px, 800px, 400px, 0);
+        }
+
+        .bottom {
+            position: absolute;
+            clip: rect(401px, 800px, 600px, 0);
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+   
+</head>
+
+<body>
+    <div class="container">
+        <img src="image/dog1.jpg" class="top" alt="">
+    </div>
+    <div class="container">
+        <img src="image/dog2.jpg" class="center" alt="">
+    </div>
+    <div class="container">
+        <img src="image/dog3.jpg" class="bottom" alt="">
+    </div>
+     <script>
+        $('img').click(function () {
+            changeSource(this)
+        });
+        function changeSource(puzzleImage) {
+            imageName = puzzleImage.getAttribute('src');
+            arr = ["image/dog1.jpg", "image/dog2.jpg", "image/dog3.jpg"];
+            switch (imageName) {
+                case arr[0]:
+                    puzzleImage.src = arr[1];
+                    break;
+                case arr[1]:
+                    puzzleImage.src = arr[2];
+                    break;
+                case arr[2]:
+                    puzzleImage.src = arr[0];
+                    break;
+            }
+        }
+        if (arr[0] == arr[0]) {
+            alert('123');
+        }
+        
+    </script>
+</body>
+<script src="puzzle.js"></script>
+
+</html>
