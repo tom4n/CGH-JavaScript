@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>good fast cheap</title>
+</head>
+
+<body>
+    <div>
+        <input type="checkbox" id="good" onclick="tickGood()">Good
+    </div>
+    <div>
+        <input type="checkbox" id="cheap" onclick="tickCheap()">Cheap
+    </div>
+    <div>
+        <input type="checkbox" id="fast" onclick="tickFast()">Fast
+    </div>
+    <script>
+        let good = document.getElementById('good');
+        let cheap = document.getElementById('cheap');
+        let fast = document.getElementById('fast');
+        good.checked = false;
+        cheap.checked = false;
+        fast.checked = false;
+
+        function tickGood() {
+            if (good.checked && cheap.checked) {
+                fast.checked = false;
+            }
+        }
+
+        function tickCheap() {
+            if (cheap.checked && fast.checked) {
+                good.checked = false;
+            }
+        }
+
+        function tickFast() {
+            if (fast.checked && good.checked) {
+                cheap.checked = false;
+            }
+        }
+    </script>
+</body>
+
+</html>
