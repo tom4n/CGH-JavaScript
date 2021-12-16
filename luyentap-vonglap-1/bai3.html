@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Hiển thị ra 20 số trong dãy fibonacci đầu tiên.</title>
+</head>
+
+<body>
+    <script>
+        var fib = [0, 1];
+        let count = 0;
+        for (var i = fib.length; i < 20; i++) {
+            fib[i] = fib[i - 2] + fib[i - 1];
+            count++;
+        }
+        document.write("20 số đầu tiền là: " +fib+"<br>");
+    </script>
+</body>
+
+</html>

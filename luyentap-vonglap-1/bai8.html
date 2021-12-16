@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 8: 123</title>
+</head>
+
+<body>
+
+    <div>
+        <p id='result'></p>
+    </div>
+    <input type="button" id="play" value="Play game" onclick="play()">
+</body>
+<script>
+    function play() {
+        for (a=1; a<=3; a++) {
+            let minNumber = Number(prompt('min number'));
+            let maxNumber = Number(prompt('max number'));
+            let guessNumber = Number(prompt('guess number'));
+            let randomNumber = Math.floor(Math.random() * maxNumber + minNumber);
+            if (guessNumber == randomNumber) {
+                document.getElementById('result').innerHTML += `lần thứ ${a} bạn đã chiến thắng <br>`;
+            } else if (guessNumber > randomNumber) {
+                document.getElementById('result').innerHTML += `lần thứ ${a} số bạn đoán lớn hơn số random <br>`;
+            } else {
+                document.getElementById('result').innerHTML += `lần thứ ${a} số bạn đoán bé hơn số random <br>`;
+            }
+        }
+    }
+</script>
+
+</html>
