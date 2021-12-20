@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+
+<body>
+    <p>từ điển anh -> việt</p>
+    <form name="TuDien">
+        <input type="text" name="english" id="english">
+        <button id="find" id="trans" onclick="trans()">Dịch</button><br>
+        <div id="result"></div>
+        <!-- <p id="result"></p> -->
+    </form>
+
+
+    <script>
+        var engWord = ["car", "motobike", "cat", "dog", "fish"];
+        var viWord = ["Ô tô", "Xe Máy", "Con mèo", "Con chó", "Con cá"];
+
+        function trans() {
+            let input = document.forms['TuDien']['english'].value;
+            let index = engWord.indexOf(input);
+            if (index != -1) {
+                document.getElementById('result').innerHTML = viWord[index];
+            } else {
+                document.getElementById('result').innerHTML = "không có từ này"
+            }
+        }
+    </script>
+</body>
+
+</html>
