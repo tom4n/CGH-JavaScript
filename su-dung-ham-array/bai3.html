@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3</title>
+</head>
+<body>
+    <script>
+        var write = prompt('type some thing: ');
+        var UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        var LOWER = 'abcdefghijklmnopqrstuvwxyz';
+        var result = [];
+
+        for (let x = 0; x < write.length; x++) {
+            if (UPPER.indexOf(write[x]) !== -1) {
+                result.push(write[x].toLowerCase());
+            } else if (LOWER.indexOf(write[x]) !== -1) {
+                result.push(write[x].toUpperCase());
+            } else {
+                result.push(write[x]);
+            }
+        }
+        console.log(result.join(''))
+    </script>
+</body>
+</html>
