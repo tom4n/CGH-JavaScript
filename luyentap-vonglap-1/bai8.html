@@ -20,7 +20,7 @@
         for (a=1; a<=3; a++) {
             let minNumber = Number(prompt('min number'));
             let maxNumber = Number(prompt('max number'));
-            let guessNumber = Number(prompt('guess number'));
+            let guessNumber = Number(prompt('guess number ' + a));
             let randomNumber = Math.floor(Math.random() * maxNumber + minNumber);
             if (guessNumber == randomNumber) {
                 document.getElementById('result').innerHTML += `lần thứ ${a} bạn đã chiến thắng <br>`;

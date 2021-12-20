@@ -1,7 +1,7 @@
 var randomNumber = [];
 var multiNumber = [];
 var n = 1;
-var m = 1;
+var m = 0;
 var totalPlus = 0;
 // khai báo ngẫu nhiên 10 mảng trong randomNumber;
 while (n <= 10) {

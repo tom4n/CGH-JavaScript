@@ -3,12 +3,12 @@ const move_right = 39;
 const move_up = 38;
 const move_down = 40;
 const step = 5;
-const soldier_left = "/image/left.gif";
-const soldier_right = "/image/right.gif";
-const soldier_up = "/image/up.gif";
-const soldier_down = "/image/down.gif";
-const soldier_height = "200px";
-const soldier_width = "200px";
+const soldier_left = "image/left.gif";
+const soldier_right = "image/right.gif";
+const soldier_up = "image/up.gif";
+const soldier_down = "image/down.gif";
+const soldier_height = "100px";
+const soldier_width = "100px";
 
 function load() {
     let soldier = document.getElementById('soldier');
