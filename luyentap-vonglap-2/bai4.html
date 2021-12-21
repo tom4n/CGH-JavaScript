@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> In hình chữ nhật 7 dòng, 21 sao </title>
+</head>
+
+<body>
+    <span id="result_1" style="font-weight: bolder;"></span>
+    <span id="result_2" style="font-weight: bolder;"></span>
+    <span id="result_3" style="font-weight: bolder;"></span>
+
+
+    <script>
+        let star = "*"
+        let res1 = document.getElementById('result_1');
+        let res2 = document.getElementById('result_2');
+        let res3 = document.getElementById('result_3');
+        let data1 = "";
+        let data2 = "";
+        let data3 = "";
+
+        for (let a = 1; a <= 21; a++) {
+            data1 += star
+        }
+        res1.innerHTML = `${data1} <br>`;
+
+        for (let c = 1; c <= 5; c++) {
+            data2 += star
+            for (let b = 1; b <=38 ; b++) {
+                data2 += "&nbsp;"
+            }
+            data2 += `${star} <br>`
+        }
+        res2.innerHTML = data2;
+
+        for (let d = 1; d <= 21; d++) {
+            data3 += star
+        }
+        res3.innerHTML = data3;
+
+
+    </script>
+</body>
+
+</html>

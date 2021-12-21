@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tính lãi </title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>Số tiền vay là:</th>
+            <th><input type="text" name="vay" id="vay"><br></th>
+        </tr>
+        <tr>
+            <th>Lãi suất:</th>
+            <th><input type="text" name="lai" id="lai"><br></th>
+        </tr>
+        <tr>
+            <th>Số tháng vay:</th>
+            <th><input type="text" name="thang" id="thang"><br></th>
+        </tr>
+    </table>
+    <button id='tinh'  onclick="tinhToan()">tính</button><br>
+    <b>lãi xuất là:</b>
+    <span id='result'></span>
+
+    <script>
+        function tinhToan() {
+            let vay = Number(document.getElementById('vay').value);
+            let lai = Number(document.getElementById('lai').value);
+            let thang = Number(document.getElementById('thang').value);
+            let result = vay * (1 + lai / 100 * thang);
+            document.getElementById('result').innerHTML = result;
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In tam giác vuông. Các góc vuông nằm ở các vị trí khác nhau</title>
+</head>
+
+<body>
+    <p id="result_1"></p><br>
+    <p id="result_2"></p><br>
+    <p id="result_3"></p><br>
+    <p id="result_4"></p><br>
+    <script>
+        var star = "*";
+        var n = 5; 
+        var res1 = document.getElementById('result_1');
+        var res2 = document.getElementById('result_2');
+        var res3 = document.getElementById('result_3');
+        var res4 = document.getElementById('result_4');
+        var data1 = "";
+        var data2 = "";
+        var data3 = "";
+        var data4 = "";
+        //
+        for (let a = 1; a <= n; a++) {
+            // data1 += "&nbsp;";
+            for (let b = 1; b <= a; b++) {
+                data1 += star;
+            }
+            data1 += "<br>";
+        }
+        res1.innerHTML = data1;
+        //
+
+
+        for (let c = 5; c >= 1; c--) {
+            for (let d = 1; d <= c; d++) {
+                data2 += star;
+            }
+            data2 += "<br>";
+        }
+        res2.innerHTML = data2
+        //
+
+
+        for (let e = 1; e <= n; e++) {
+            for (let f = 1; f <= (n-e); f++) {
+                data3 += "&nbsp;&nbsp;";
+            }
+            for (let g = 1; g <= e; g++) {
+                    data3 += star;
+                }
+                data3 += "<br>";
+        }
+        res3.innerHTML = data3;
+        //
+
+
+        for (let e = 1; e <= n; e++) {
+            for (let f = 1; f <= e; f++) {
+                data4 += "&nbsp;&nbsp;";
+            }
+            for (let g = 5; g >= e; g--) {
+                    data4 += star
+            }
+           data4 += "<br>"
+        }
+        res4.innerHTML = data4
+    </script>
+
+</body>
+
+</html>
