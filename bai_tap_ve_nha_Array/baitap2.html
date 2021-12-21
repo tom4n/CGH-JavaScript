@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài tập 2</title>
+
+</head>
+<body>
+    <input type="button" value="reset matrix" onclick="window.location.reload()">
+    <div id="showMatrix"></div><br>
+    <div id="showMatrix2"></div><br>
+    <div id="result"><br></div><br>
+    <div id="result2"><br></div><br>
+
+    <script>
+         var min = 10;
+        var max = 90;
+        var size = 9;
+        var total = 0;
+        var total2 = 0;
+        var total3 = 0;
+        var arr = [];
+        var arr2 = []
+        var matrix = document.getElementById('showMatrix');
+        var matrix2 = document.getElementById('showMatrix2');
+        var result = document.getElementById('result');
+        var result2 = document.getElementById('result2');
+        // ma trận 1
+        for (let i = 0; i <= size; i++) {
+            arr[i] = [];
+            for (let j = 0; j <= size; j++) {
+                arr[i][j] = Math.floor(Math.random() * (max - min + 1) + min);
+            }
+            matrix.innerHTML += arr[i] + "<br>";
+        }
+        // ma trận 2
+        for (let i = 0; i <= size; i++) {
+            arr2[i] = [];
+            for (let j = 0; j <= size; j++) {
+                arr2[i][j] = Math.floor(Math.random() * (max - min + 1) + min);
+            }
+            matrix2.innerHTML += arr2[i] + "<br>";
+        }
+        // tổng 2 ma trận
+        let arr3 = arr.concat(arr2)
+        for (a = 0; a < 20; a++ ) {
+            for (b = 0 ; b <= size; b++) {
+                total += arr3[a][b];
+            }
+            result.innerHTML = `tổng của 2 ma trận là: ${total}` ;
+        }
+        //tích 2 ma trận
+        for (c = 0; c <= size; c++ ) {
+            for (d = 0 ; d <= size; d++) {
+                total2 += arr[c][d];
+            }
+        }
+         for (e = 0; e <= size; e++ ) {
+            for (f = 0 ; f <= size; f++) {
+                total3 += arr2[e][f];
+            }  
+        }
+        result2.innerHTML = `tích của hai ma trận là: ${total2*total3}`
+
+    </script>
+</body>
+</html>
