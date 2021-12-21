@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> [Thực hành] Tạo bàn cờ caro đơn giản</title>
+    <style>
+        td {
+            height: 200px;
+            width: 200px;
+            text-align: center;
+            font-size: 700%;
+        }
+        td:hover {
+            cursor: pointer;
+        }
+        .isX {
+            background-color: blue;
+            color: white;
+        }
+        .isO {
+            background-color: red;
+            color: white;
+        }
+        table {
+            margin: 0 auto;
+        }
+        button{
+            position: absolute;
+            left: 45%;
+            size: 50px;
+            padding: 10px 30px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="caro"></div>
+    <button onclick="location.reload()">Reset game</button>
+    <script src="tictactoe.js"></script>
+</body>
+
+</html>
