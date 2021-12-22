@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Thực hành] Tìm giá trị nhỏ nhất của mảng</title>
+</head>
+
+<body>
+    <div id="result_1"></div>
+    <div id="result_2"></div>
+    <div id="result_3"></div>
+    <div id="result_4"></div>
+
+    <script>
+        let arr1 = [3, 5, 1, 8, -3, 7, 8]
+        let arr2 = [7, 12, 6, 9, 20, 56, 89]
+        let arr3 = []
+        let arr4 = [0, 0, 0, 0, 0, 0]
+        let minA = minArray1(arr1);
+        let minA2 = minArray2(arr2);
+        let minA3 = minArray3(arr3);
+        let minA4 = minArray4(arr4);
+
+        function minArray1(arr) {
+            let min = arr[0];
+            for (var i = 1; i < arr.length; i++) {
+                if (arr[i] < min) {
+                    min = arr[i];
+                }
+            }
+            document.getElementById('result_1').innerHTML = `-số nhỏ nhất trong mảng 1 là ${min}`;
+        }
+
+        function minArray2(arr) {
+            let min = arr[0];
+            for (var i = 1; i < arr.length; i++) {
+                if (arr[i] < min) {
+                    min = arr[i];
+                }
+            }
+            document.getElementById('result_2').innerHTML = `-số nhỏ nhất trong mảng 2 là ${min}`;
+        }
+
+        function minArray3(arr) {
+            if (arr.length == 0) {
+                document.getElementById('result_3').innerHTML = `-mảng này trống`
+                return -1;
+            }
+                
+            let min = arr[0];
+            for (var i = 1; i < arr.length; i++) {
+                if (arr[i] < min) {
+                    min = arr[i];
+                }
+            }
+            document.getElementById('result_3').innerHTML = `-số nhỏ nhất trong mảng 3 là ${min}`;
+        }
+
+        function minArray4(arr) {
+            let min = arr[0];
+            for (var i = 1; i < arr.length; i++) {
+                if (arr[i] < min) {
+                    min = arr[i];
+                }
+            }
+            document.getElementById('result_4').innerHTML = `-số nhỏ nhất trong mảng 4 là ${min}`;
+        }
+    </script>
+</body>
+
+</html>
