@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chuyển đổi giữa feet và meters</title>
+</head>
+<body>
+        <span> nhập giá trị meter </span><input type="number" id="data_1" oninput="meterToFeet(this.value)">
+        <a id="result_1"></a><br><br><br>
+        <span> nhập giá trị feet </span><input type="number" id="data_2" oninput="feetToMeter(this.value)">
+        <a id="result_2"></a>
+
+
+    <script>
+        function meterToFeet(meter) {
+           let foot = 3.279 * meter 
+            document.getElementById('result_1').innerHTML = `meter được đổi sang feet là: ${foot}`
+        }
+
+        function feetToMeter(foot) {
+            let meter = 0.305 * foot
+            document.getElementById('result_2').innerHTML = `feet được đổi sang meter là: ${meter}`
+        }
+    </script>
+</body>
+</html>
