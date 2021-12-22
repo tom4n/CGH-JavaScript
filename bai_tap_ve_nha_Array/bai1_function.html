@@ -51,12 +51,17 @@
                 }
                 matrix.innerHTML += arr[i] + "<br>";
             }
+        })(10, 90, 10);
 
+        (function (size) {
             for (let c = 0; c < size; c++) {
                 total2 += arr[c][c];
             }
             totalArray2.innerHTML = `tổng các giá trị trên đường chéo chính là: ${total2}`;
 
+        })(10);
+
+        (function (size) {
             for (let d = 0; d < size; d++) {
                 for (let e = 0; e < size; e++) {
                     if (e == size - d) {
@@ -65,7 +70,9 @@
                 }
                 totalArray3.innerHTML = `tổng các giá trị trên đường chéo phụ là: ${total3}`;
             }
+        })(10);
 
+        (function (size) {
             for (let f = 0; f < size; f++) {
                 for (let g = 0; g < 1; g++) {
                     total_ngang += arr[g][f];
@@ -80,29 +87,31 @@
             }
             total4 = total_ngang + total_ngang_2 + total_doc + total_doc_2 -
                 (arr[0][0] + arr[0][9] + arr[9][0] + arr[9][9]);
-            totalArray4.innerHTML = `tổng các giá trị trên đường biên là: ${total4}`;
+            totalArray4.innerHTML =
+                `tổng các giá trị trên đường biên là: ${total4}`;
+        })(10);
+        (function () {
+        let triangle = [
+            [arr[0][0], arr[0][1], arr[0][2], arr[0][3], arr[0][4], arr[0][5], arr[0][6], arr[0][7], arr[0][
+                8
+            ], arr[0][9]],
+            [space, arr[1][1], arr[1][2], arr[1][3], arr[1][4], arr[1][5], arr[1][6], arr[1][7], arr[1][8],
+                space
+            ],
+            [space, space, arr[2][2], arr[2][3], arr[2][4], arr[2][5], arr[2][6], arr[2][7], space, space],
+            [space, space, space, arr[3][3], arr[3][4], arr[3][5], arr[3][6], space, space, space],
+            [space, space, space, space, arr[4][4], arr[4][5], space, space, space, space]
+        ]
 
-            let triangle = [
-                [arr[0][0], arr[0][1], arr[0][2], arr[0][3], arr[0][4], arr[0][5], arr[0][6], arr[0][7], arr[0][
-                    8
-                ], arr[0][9]],
-                [space, arr[1][1], arr[1][2], arr[1][3], arr[1][4], arr[1][5], arr[1][6], arr[1][7], arr[1][8],
-                    space
-                ],
-                [space, space, arr[2][2], arr[2][3], arr[2][4], arr[2][5], arr[2][6], arr[2][7], space, space],
-                [space, space, space, arr[3][3], arr[3][4], arr[3][5], arr[3][6], space, space, space],
-                [space, space, space, space, arr[4][4], arr[4][5], space, space, space, space]
-            ]
-            
-            for (let l = 0; l < 5; l++) {
-                triangle_down.innerHTML += triangle[l].join(" ") + "<br>"
-            }
+        for (let l = 0; l < 5; l++) {
+            triangle_down.innerHTML += triangle[l].join(" ") + "<br>"
+        }
 
-            
-            for (let m = 4; m >= 0; m--) {
-                triangle_up.innerHTML += triangle[m].join(" ") + "<br>"
-            }
-        })(10, 90, 10);
+
+        for (let m = 4; m >= 0; m--) {
+            triangle_up.innerHTML += triangle[m].join(" ") + "<br>"
+        }
+    })();
     </script>
 </body>
 
