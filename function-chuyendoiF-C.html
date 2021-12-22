@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chuyển đổi nhiệt độ</title>
+</head>
+
+<body>
+    <h1>Ứng dụng chuyển đổi nhiệt độ</h1>
+    <p>nhập giá trị cần đổi độ F sang C</p>
+    <input type="number" id="fah" oninput="change(this.value)"><br>
+    <a>giá trị độ C là:</a>
+    <a id="cel"></a>
+
+
+    <script>
+        var ressult = document.getElementById('cel');
+        function change(F) {
+           let C = (F - 32) / 1.8;
+           ressult.innerHTML = C
+        }
+        
+    </script>
+</body>
+
+</html>
