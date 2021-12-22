@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kiểm tra số nguyên tố</title>
+</head>
+
+<body>
+    kiểm tra số nguyên tố<br>
+    <input type="number" id="data" oninput="checkNum(this.value)">
+    <a id="result"></a>
+
+    <script>
+        var result = document.getElementById('result');
+
+        function checkNum(num) {
+            if (num < 2) {
+                result.innerHTML = `${num} không phải là số nguyên tố`
+            } else if (num % num === 0 && num % 1 === 0 && num % 2 !== 0) {
+                result.innerHTML = `${num} là số nguyên tố`
+            } else {
+                result.innerHTML = `${num} không phải là số nguyên tố`
+            }
+        }
+    </script>
+</body>
+
+</html>
