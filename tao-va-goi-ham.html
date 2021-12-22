@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo và gọi hàm</title>
+</head>
+<body>
+    <script>
+        (function confirmAnswer(answer) {
+            let result = ":D"
+            if (answer) {
+                alert('chào mừng bạn tới Codegym')
+            } else {
+                alert('gặp lại bạn sau')
+            }
+            return result;
+        })(confirm("bạn là học viên Codegym ?"));
+    </script>
+</body>
+</html>
