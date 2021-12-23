@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" name="lengthMatrix" id="lengthMatrix" placeholder="Enter length values">
+    <input type="number" name="min" id="min" placeholder="Enter the smallest number">
+    <input type="number" name="max" id="max" placeholder="Enter the largest number">
+    <button onclick="run()">Hiện ma trận</button><br>
+    <a id="showMatrix"></a>
+    <script>
+        // nút
+        function run() {
+            document.getElementById('showMatrix').innerHTML = " ";
+            var lengthMatrix = document.getElementById('lengthMatrix').value;
+            var min = document.getElementById('min').value;
+            var max = document.getElementById('max').value;
+            runMatrix(lengthMatrix,min,max)
+        }
+        // thực ti
+        function runMatrix(lengthMatrix, min, max) {
+            var matrix = [];
+            for (let i = 0; i < lengthMatrix; i++) {
+                matrix[i] = [];
+                for (let j = 0; j < lengthMatrix; j++) {
+                    matrix[i][j] = Math.floor(Math.random() * (max - min + 1) + min);
+                }
+                document.getElementById('showMatrix').innerHTML += matrix[i] + '<br>'
+            }
+            
+        }
+    </script>
+</body>
+
+</html>

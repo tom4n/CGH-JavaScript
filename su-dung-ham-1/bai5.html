@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 5</title>
+</head>
+
+<body>
+    <div id="result"></div>
+
+
+    <script>
+        function check() {
+            let type = prompt('type the name of star');
+            var star = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+            var starCluster = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+            var result = document.getElementById('result');
+            for (let i of star) {
+                if (star.indexOf(type) != -1) {
+                    result.innerHTML = `${star[star.indexOf(type)]} in ${starCluster[star.indexOf(type)]}`
+                } else {
+                    result.innerHTML= "not found"
+                }
+            }
+        }
+        check()
+    </script>
+</body>
+
+</html>
