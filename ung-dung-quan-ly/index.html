@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng quản lý sản phẩm</title>
+    <link rel="stylesheet" href="product.css">
+</head>
+
+<body>
+    <div id="backGround">
+        <div id="addNewProduct">
+            <b>&nbsp;&nbsp;&nbsp;Add new product</b><br>
+            <input style="margin-left: 10px;" type="text" id="product">
+            <button onclick="addProduct()" class="btn">Add</button><br>
+        </div>
+        <b>Display All Product </b>
+        <button onclick="showList()" class="btn"> show list</button>
+        <button onclick="hideList()" class="btn">hide list</button>
+        <div id="listProduct">
+
+        </div>
+        <div id="edit"></div>
+    </div>
+</body>
+<script src="product.js"></script>
+
+</html>
