@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài 6: kiểm tra số nguyên dương</title>
+</head>
+
+<body>
+    <h3>kiểm tra số nguyên dương</h3>
+    <input type="number" name="num" id="num">
+    <button onclick="check()">check</button><br>
+    <span id="result"></span>
+
+    <script>
+        function getData(data) {
+            if (data > 1) {
+                document.getElementById('result').innerHTML = `${data} là số nguyên dương`;
+            } else {
+                document.getElementById('result').innerHTML = `${data} không phải là số nguyên dương`;
+            }
+        }
+
+        function check() {
+            let num = Number(document.getElementById('num').value);
+            getData(num)
+        }
+    </script>
+</body>
+
+</html>

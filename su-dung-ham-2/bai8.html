@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 8: đảo ngược mảng</title>
+</head>
+
+<body>
+    <h3>nhập một chuổi số</h3>
+    <input type="text" name="num" id="num">
+    <button onclick="btn()">đảo ngược</button>
+    <div id="result"></div>
+
+    <script>
+        function btn() {
+            let newArr = document.getElementById('num').value;
+            let arr = [];
+            arr = newArr.split("").reverse()
+            document.getElementById('result').innerHTML = arr
+
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3: tính giai thừa của một số nguyên</title>
+</head>
+<body>
+    <b>nhập một số nguyên</b>
+    <input type="number" name="num" id="num">
+    <button onclick="caculator()">caculator</button><br>
+    <div id="result"></div>
+
+    <script>
+        function check(data) {
+            let fNum = 1;
+            for (i = 1; i <= data; i++) {
+                fNum *= i;
+            }
+            document.getElementById('result').innerHTML = `giai thừa của ${data} là ${fNum}`;
+        }
+        function caculator() {
+            let num = document.getElementById('num').value;
+            check(num)
+        }
+    </script>
+</body>
+</html>

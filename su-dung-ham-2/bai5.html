@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 5: tìm số nhỏ nhất</title>
+</head>
+<body>
+    <b>nhập các số vào ô dưới đây</b><br>
+    <a>số a</a><input type="number" name="numA" id="numA"><br>
+    <a>số b</a><input type="number" name="numB" id="numB"><br>
+    <a>số c</a><input type="number" name="numC" id="numC"><br>
+    <button onclick="check()">kiểm tra</button>
+    <div id="result"></div>
+
+    <script>
+        var result = document.getElementById('result');
+        function find(a,b,c) {
+            if (a > b && a > c) {
+                result.innerHTML = ` số ${a} là số lớn nhất `;
+            }else if ( b > c && b > a) {
+                result.innerHTML = ` số ${b} là số lớn nhất `;
+            } else {
+                result.innerHTML = ` số ${c} là số lớn nhất `;
+            }
+        }
+        function check() {
+            let numA = Number(document.getElementById('numA').value);
+            let numB = Number(document.getElementById('numB').value);
+            let numC = Number(document.getElementById('numC').value);
+            find(numA,numB,numC)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2: tính diện tích và chu vi</title>
+</head>
+<body>
+    <span>nhập vào bán kính của hình tròn</span><br>
+    <input type="number" name="num" id="num">
+    <button onclick="cacu()">caculator</button><br>
+    <div id='result'></div>
+    <div id='result2'></div>
+
+    <script>
+        function cacu() {
+            let num = document.getElementById('num').value;
+            result(num)
+        }
+        function result(data) {
+            let C = (2*data)*Math.PI;
+            let S = Math.PI*Math.pow(data, 2);
+            document.getElementById('result').innerHTML = `chu vi hình tròn là ${C}` 
+            document.getElementById('result2').innerHTML = `diện tích hình tròn là ${S}`
+        }
+    </script>
+</body>
+</html>

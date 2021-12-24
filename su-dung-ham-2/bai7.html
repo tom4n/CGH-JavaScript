@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>đổi 2 số</title>
+</head>
+
+<body>
+    <h3>tráo đổi 2 số</h3>
+    A <input type="number" name="numA" id="numA"><br>
+    B <input type="number" name="numB" id="numB"><br>
+    <button onclick="btn()">tráo</button><br>
+    <b>A:</b><span id="result"> </span><br>
+    <b>B:</b><span id="result2"> </span>
+
+    <script>
+        function changeNum(a, b) {
+            let fakeNum = a;
+            a = b;
+            b = fakeNum;
+            document.getElementById('result').innerHTML = a;
+            document.getElementById('result2').innerHTML = b;
+        }
+
+        function btn() {
+            let a = document.getElementById('numA').value;
+            let b = document.getElementById('numB').value;
+            changeNum(a, b)
+        }
+    </script>
+</body>
+
+</html>
