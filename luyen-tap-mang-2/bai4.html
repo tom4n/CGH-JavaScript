@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 4</title>
+</head>
+<body>
+    <div id="result"> </div>
+
+    <script>
+        let arr = ["a",2,5,7,"s","h",24,"6","s"];
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if ( typeof arr[i] == 'string') {
+                count++
+            }
+           
+        }
+        document.getElementById('result').innerHTML = `số từ trong mảng là ${count}`
+    </script>
+</body>
+</html>

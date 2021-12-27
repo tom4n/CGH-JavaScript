@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 5</title>
+</head>
+
+<body>
+
+
+    <script>
+        let strA = prompt('nhập vào chuỗi A');
+        let strB = prompt('nhập vào chuỗi B');
+        let arrA = strA.split("");
+        let arrB = strB.split("");
+        for (i = 0; i < arrA.length; i++) {
+            if (arrA[i] == arrB[i]) {
+                alert('two array is same');
+                break;
+            } else {
+                alert('two array is not same');
+                break;
+            }
+        }
+    </script>
+</body>
+
+</html>
