@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1</title>
+</head>
+
+<body>
+    <div id="result"></div>
+    <div id="result_2"></div>
+    <script>
+        var arr = [];
+
+        (function (size, max, min) {
+            for (let i = 0; i < size; i++) {
+                arr[i] = Math.floor(Math.random() * (max - min + 1) + min);
+            }
+            document.getElementById('result').innerHTML = arr;
+            return arr;
+        })(10, 20, 1);
+
+
+        (function (arr) {
+            let count = 0;
+            let show = "";
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] >= 10) {
+                    show += arr[i]
+                    count++
+                }
+                document.getElementById('result_2').innerHTML = `số nguyên lớn hơn hoặc bằng 10 có ${count} số`;
+            }
+        })(arr)
+    </script>
+</body>
+
+</html>
