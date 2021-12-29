@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xây dựng lớp mô tả temp</title>
+</head>
+
+<body>
+    <input type="number" name="inputC" id="inputC">
+    <span id="result"></span>
+    <br>
+    <button onclick="cvF()">convert to F</button>
+    <button onclick="cvK()">convert to Kenvin</button>
+
+    <script>
+        // let value = document.getElementById('inputC').value;
+        // let doC = new Convert(Number(value));
+
+        function Convert(data) {
+            this.C = data;
+            this.convertToF = function () {
+                let F = 9 * 5 * this.C + 32;
+                console.log(this.C)
+                return F;
+            }
+            this.convertToKenvin = function () {
+                let K = this.C + 273.15;
+                return K;
+            }
+        }
+
+        function cvF() {
+            let value = document.getElementById('inputC').value;
+            let doC = new Convert(Number(value));
+            document.querySelector("#result").innerHTML = doC.convertToF();
+        }
+
+        function cvK() {
+            let value = document.getElementById('inputC').value;
+            let doC = new Convert(Number(value));
+            document.querySelector("#result").innerHTML = doC.convertToKenvin();
+        }
+    </script>
+</body>
+
+</html>
