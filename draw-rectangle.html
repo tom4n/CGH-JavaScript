@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Draw rectangle</title>
+</head>
+
+<body>
+    <div>
+        <canvas id="myCanvas" width="650" height="650px" style="border:1px solid #d3d3d3;"></canvas>
+    </div>
+    <div id="SaP"></div>
+
+    <script>
+        function Rectangle(x, y, width, height) {
+            this.x = x;
+            this.y = y;
+            this.width = width;
+            this.height = height;
+
+            this.SOfRectangle = function () {
+                let S = height * width;
+                return S;
+            };
+
+            this.POfRectangle = function () {
+                let P = (height + width) * 2;
+                return P;
+            };
+        };
+
+        function randomColor() {
+            var red = Math.floor(Math.random() * 255);
+            var blue = Math.floor(Math.random() * 255);
+            var green = Math.floor(Math.random() * 255);
+            return `rgb(${red},${blue},${green})`;
+        };
+
+        var ctx = document.getElementById('myCanvas').getContext('2d');
+        var rectangle = new Rectangle(200, 200, 300, 100)
+        var S = rectangle.SOfRectangle();
+        var P = rectangle.POfRectangle();
+        var color = randomColor();
+        ctx.beginPath();
+        ctx.fillRect(rectangle.x, rectangle.y, rectangle.width, rectangle.height);
+        ctx.fillstyle = color;
+        ctx.fill();
+
+        document.getElementById('SaP').innerHTML = `S(diện tích) is ${S} <br> P(chu vi) is ${P}`;
+    </script>
+</body>
+
+</html>
