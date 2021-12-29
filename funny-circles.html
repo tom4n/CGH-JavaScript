@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Funny Circle</title>
+</head>
+
+<body>
+    <div>
+
+        <canvas id="myCanvas" width="650" height="650px" style="border:1px solid #d3d3d3;">
+    </div>
+        <button onclick="window.location.reload()">reset</button>
+</body>
+<script>
+    function Circle(x, y, radius) {
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+    }; //vẽ hình tròn
+
+    function getRandomHex() {
+        return Math.floor(Math.random() * 255);
+    }; //tạo số ngẫu nhiên và đẩy vào getRandomColor để lấy màu ngẫu nhiên
+    function getRandomColor() {
+        var red = getRandomHex();
+        var green = getRandomHex();
+        var blue = getRandomHex();
+        return `rgb(${red},${blue},${green})`
+    }; // rgb(red,green,blue) đẩy số random vào những  tham số này sẽ sinh ra màu ngẫu nhiên
+
+    function createCircle() {
+        var ctx = document.getElementById('myCanvas').getContext('2d');
+        var radius = Math.floor(Math.random() * (100-20+1)+20); //bán kính ngẫu nhiên từ 20-100
+        var cx = Math.floor(Math.random() * window.innerWidth); //random tọa độ x
+        var cy = Math.floor(Math.random() * window.innerHeight); //random tọa độ y
+        var color = getRandomColor(); //random màu(sử dụng các hàm function ở trên)
+        var circle = new Circle(cx, cy, radius); //truyền tham số vào funcion Circle để vẽ hình tròn
+        ctx.beginPath(); //lệnh để thiết lập nét vẽ
+        ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI); //lệnh để bắt đầu vẽ với các tham số (x,y,radius,góc bắt đầu, góc kết thúc)
+        ctx.fillStyle = color; //lấy màu cho hình đã vẽ "rgb(a,b,c)"
+        ctx.fill(); //bắt đầu đổ màu lên hình
+    };
+
+    function createMultipleCircle() {
+        for (let i = 0; i < 70; i++) {
+            createCircle();
+        }
+    } //function này sử dụng vòng lăp là 70 để gọi lại nhiều lần createCircle 
+    createMultipleCircle()
+</script>
+
+</html>
