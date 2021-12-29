@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mô tả điện thoại</title>
+    <link rel="stylesheet" href="phone.css">
+</head>
+<body>
+    <div id="phone_1" class="div_left">
+        <table id="iphone" border="1">
+            <tr class="size">
+                <td colspan="2">
+                    <button id="powerIP6" onclick="power('iphone6')">Off</button>
+                </td>
+                <td class="right" id="eneryIP6"></td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <div id="inboxIP6">
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="size">
+                <td colspan="2"><input type="text" id="msgIP6"></td>
+                <td><button id="sendIP6" onclick="sendMessage('iphone6')">Send</button></td>
+            </tr>
+        </table>
+    </div>
+    <div id="phone_2" class="div_right">
+        <table id="samsung" border="1">
+            <tr class="size">
+                <td colspan="2">
+                    <button id="powerIP7" onclick="power('iphone7')">Off</button>
+                </td>
+                <td class="right" id="eneryIP7"></td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <div id="inboxIP7">
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="size">
+                <td colspan="2"><input type="text" id="msgIP7"></td>
+                <td><button id="sendIP7" onclick="sendMessage('iphone7')">Send</button></td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="phone.js">
+        
+    </script>
+</body>
+</html>

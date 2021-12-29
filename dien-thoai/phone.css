@@ -1,0 +1,42 @@
+#phone_1 {
+    width: 250px;
+    height: 400px;
+    background-color: greenyellow;
+}
+
+#phone_2 {
+    width: 250px;
+    height: 400px;
+    background-color: rgb(255, 246, 121);
+}
+
+#iphone,
+#samsung {
+    width: 250px;
+    height: 400px;
+}
+#phone_1 #inboxIP6, #phone_2 #inboxIP7 {
+    position: relative;
+    top: 0px;
+}
+
+.right {
+    text-align: right;
+}
+.left {
+    text-align: left;
+}
+
+.size {
+    height: 20px
+}
+
+.div_left {
+    width: 200px;
+    float: left;
+}
+
+.div_right {
+    width: 200px;
+    float: left;
+}
