@@ -44,7 +44,7 @@
         let buttonOnOff = new SwitchButton();
         let lamp = new ElectricLamp();
         buttonOnOff.connectToLamp(lamp);
-        for (let i = 0; i < 5; i++) {
+        for (let i = 0; i < 10; i++) {
             buttonOnOff.switchOn();
             console.log(lamp.status);
             buttonOnOff.switchOff();
