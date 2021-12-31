@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tương tác giữa công tắc và bóng đèn</title>
+</head>
+
+<body>
+    <script>
+        class SwitchButton {
+            constructor(status, lamp) {
+                this.status = false;
+                this.lamp = lamp;
+            };
+            connectToLamp(lamp) {
+                this.lamp = lamp;
+            };
+            switchOff() {
+                this.status = false;
+                this.lamp.turnOff();
+
+            };
+            switchOn() {
+                this.status = true;
+                this.lamp.turnOn();
+            }
+        };
+
+        class ElectricLamp {
+            constructor(status) {
+                this.status = false;
+            };
+            turnOff() {
+                this.status = false;
+            };
+            turnOn() {
+                this.status = true;
+            };
+        }
+
+        let buttonOnOff = new SwitchButton();
+        let lamp = new ElectricLamp();
+        buttonOnOff.connectToLamp(lamp);
+        for (let i = 0; i < 5; i++) {
+            buttonOnOff.switchOn();
+            console.log(lamp.status);
+            buttonOnOff.switchOff();
+            console.log(lamp.status);
+        }
+    </script>
+</body>
+
+</html>
